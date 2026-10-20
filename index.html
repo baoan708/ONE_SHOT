@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1011">
+  <title>ONE SHOT — Memory Machine 2040</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="machine">
+
+  <!-- DEVICE HEADER -->
+  <header class="machine-header">
+    <button class="logo" data-page="home">
+      <span class="logo-symbol">◎</span>
+      <span>ONE<span class="logo-accent">SHOT</span></span>
+      <sup>®</sup>
+    </button>
+
+    <div class="header-model">
+      <span>PERSONAL MEMORY DEVICE</span>
+      <strong>MODEL OS—2040 / MARK I</strong>
+    </div>
+
+    <div class="header-status">
+      <span class="live-dot"></span>
+      <span>OPTICAL SYSTEM ONLINE</span>
+    </div>
+  </header>
+
+  <!-- CAMERA MODE DIAL / NAVIGATION -->
+  <nav class="mode-dial" aria-label="Camera modes">
+    <span class="mode-dial-label">SELECT MODE</span>
+
+    <button class="mode-button active" data-page="home">
+      <small>01</small> HOME
+    </button>
+    <button class="mode-button" data-page="camera">
+      <small>02</small> CAPTURE
+    </button>
+    <button class="mode-button" data-page="memories">
+      <small>03</small> ARCHIVE
+    </button>
+    <button class="mode-button" data-page="journey">
+      <small>04</small> TIMELINE
+    </button>
+    <button class="mode-button" data-page="letters">
+      <small>05</small> LETTERS
+    </button>
+
+    <span class="mode-dial-end">◈ OS / 01</span>
+  </nav>
+
+  <main>
+
+    <!-- ================= HOME ================= -->
+    <section id="home" class="page active">
+
+      <div class="home-stage">
+
+        <!-- TECHNICAL CORNER MARKINGS -->
+        <span class="stage-corner top-left"></span>
+        <span class="stage-corner top-right"></span>
+        <span class="stage-corner bottom-left"></span>
+        <span class="stage-corner bottom-right"></span>
+
+        <div class="stage-top">
+          <div class="stage-code">
+            <span class="signal-light"></span>
+            <span>MEMORY PRESERVATION SYSTEM</span>
+          </div>
+          <div class="stage-date" id="todayDate">
+            OCT 18, 2040
+          </div>
+        </div>
+
+        <div class="home-content">
+
+          <!-- LEFT INSTRUMENT PANEL -->
+          <aside class="instrument-panel left-instruments">
+            <div class="instrument-block">
+              <span class="instrument-title">EXPOSURE LIMIT</span>
+              <strong>1 / DAY</strong>
+              <span class="instrument-subtitle">NON-RENEWABLE FRAME</span>
+            </div>
+
+            <div class="instrument-block">
+              <span class="instrument-title">SENSOR STATUS</span>
+              <div class="sensor-bars">
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <span class="instrument-subtitle">MEMORY READY</span>
+            </div>
+
+            <div class="vertical-reading">
+              <span>ISO 400</span>
+              <span>F / 1.8</span>
+              <span>EV +0.0</span>
+            </div>
+          </aside>
+
+          <!-- MAIN LENS -->
+          <div class="lens-area">
+
+            <div class="lens-top-label">
+              <span>◈ OPTICAL MEMORY UNIT ◈</span>
+              <span>ONE EXPOSURE ONLY</span>
+            </div>
+
+            <div class="lens-housing" id="lensHousing">
+
+              <div class="lens-ticks"></div>
+              <div class="lens-metal-ring"></div>
+              <div class="lens-focus-ring"></div>
+              <div class="lens-inner-ring"></div>
+
+              <div class="lens-glass">
+                <div class="lens-reflection"></div>
+
+                <!-- APERTURE BLADES -->
+                <div class="aperture-blades">
+                  <span class="blade blade-1"></span>
+                  <span class="blade blade-2"></span>
+                  <span class="blade blade-3"></span>
+                  <span class="blade blade-4"></span>
+                  <span class="blade blade-5"></span>
+                  <span class="blade blade-6"></span>
+                </div>
+
+                <div class="lens-center">
+                  <span class="lens-crosshair horizontal"></span>
+                  <span class="lens-crosshair vertical"></span>
+
+                  <span class="lens-count" id="shotsRemaining">01</span>
+                  <span class="lens-count-label">FRAME REMAINING</span>
+                </div>
+              </div>
+
+              <span class="lens-engraving engraving-top">
+                ONE SHOT · MEMORY OPTICS
+              </span>
+              <span class="lens-engraving engraving-bottom">
+                2040 · NO RETAKES
+              </span>
+
+            </div>
+
+            <div class="lens-bottom-label">
+              <span>◀ FOCUS / ∞</span>
+              <span>EXPOSURE 01 / 01</span>
+              <span>F / 1.8 ▶</span>
+            </div>
+          </div>
+
+          <!-- RIGHT INSTRUMENT PANEL -->
+          <aside class="instrument-panel right-instruments">
+
+            <div class="instrument-block">
+              <span class="instrument-title">DAILY ALLOCATION</span>
+              <strong id="allocationReadout">01 / 01</strong>
+              <span class="instrument-subtitle">AVAILABLE FRAMES</span>
+            </div>
+
+            <div class="instrument-block">
+              <span class="instrument-title">SHUTTER POLICY</span>
+              <div class="policy-indicator">
+                <span>NO</span>
+                <span>RETAKES</span>
+              </div>
+            </div>
+
+            <div class="instrument-block">
+              <span class="instrument-title">MEMORY INTEGRITY</span>
+              <div class="integrity-meter">
+                <span></span>
+              </div>
+              <span class="instrument-subtitle">PRESERVATION ACTIVE</span>
+            </div>
+          </aside>
+
+        </div>
+
+        <!-- PHILOSOPHY -->
+        <div class="home-message">
+          <span class="eyebrow">THE ART OF CHOOSING</span>
+
+          <h1>
+            A thousand moments.<br>
+            <em>One to remember.</em>
+          </h1>
+
+          <p>
+            The world gives you countless moments every day.
+            This camera asks you to choose just one.
+            Not because the others don't matter,
+            but because they do.
+          </p>
+
+          <button class="primary-action" data-page="camera">
+            <span class="action-indicator">◉</span>
+            ENTER THE VIEWFINDER
+            <span class="action-arrow">↗</span>
+          </button>
+
+          <div class="home-warning">
+            <span>NO RETAKES</span>
+            <span class="warning-separator">✳</span>
+            <span>NO REPLACEMENTS</span>
+            <span class="warning-separator">✳</span>
+            <span>YOUR CHOICE MATTERS</span>
+          </div>
+        </div>
+
+        <!-- FILM STRIP -->
+        <div class="film-section">
+          <div class="film-heading">
+            <span>35MM MEMORY CARTRIDGE / OS-001</span>
+            <span>ONE FRAME PER DAY</span>
+          </div>
+
+          <div class="film-strip">
+            <div class="film-frame unused">
+              <span>YESTERDAY</span>
+              <strong>—</strong>
+            </div>
+
+            <div class="film-frame current">
+              <span>TODAY</span>
+              <strong id="filmFrameCount">01</strong>
+              <small>AVAILABLE</small>
+            </div>
+
+            <div class="film-frame locked">
+              <span>TOMORROW</span>
+              <strong>×</strong>
+              <small>LOCKED</small>
+            </div>
+          </div>
+
+          <p class="film-caption">
+            YOU CAN ALWAYS CHOOSE NOT TO SHOOT.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CAMERA ================= -->
+    
+<div class="demo-toolbar">
+  <button id="demoModeBtn" type="button">
+    ENABLE DEMO MODE
+  </button>
+  <span id="demoModeStatus">DEMO OFF</span>
+</div>
+
+    <section id="camera" class="page interior-page">
+      <div class="section-heading">
+        <span>MODE 02 / OPTICAL CAPTURE</span>
+        <h2>Choose your <em>moment.</em></h2>
+        <p>One exposure. No retakes. Take your time.</p>
+      </div>
+
+      <div class="camera-device">
+        <div class="camera-device-top">
+          <span>ONE SHOT / OS—2040</span>
+          <span id="cameraStatus">SENSOR STANDBY</span>
+        </div>
+
+        <div class="viewfinder">
+          <video id="cameraFeed" autoplay playsinline muted></video>
+          <canvas id="photoCanvas" hidden></canvas>
+
+          <div class="viewfinder-grid"></div>
+          <div class="focus-reticle">+</div>
+
+          <div class="viewfinder-top">
+            <span>● LIVE MEMORY</span>
+            <span id="frameCounter">FRAME 01 / 01</span>
+          </div>
+
+          <div class="viewfinder-bottom">
+            <span>ISO 400</span>
+            <span>F/1.8</span>
+            <span id="cameraTime">00:00:00</span>
+            <span>MEMORY MODE</span>
+          </div>
+
+          <div id="shutterOverlay" class="shutter-overlay"></div>
+        </div>
+
+        <div class="camera-controls">
+          <div class="camera-control-info">
+            <span>EXPOSURES LEFT</span>
+            <strong id="exposureCount">01</strong>
+          </div>
+
+          <div class="capture-group">
+            <button id="captureBtn" class="capture-button"
+                    aria-label="Hold to capture a memory">
+              <span class="capture-inner"></span>
+              <span class="capture-progress"></span>
+            </button>
+            <span>HOLD TO COMMIT</span>
+          </div>
+
+          <div class="camera-control-info right">
+            <span>CAPTURE POLICY</span>
+            <strong>NO RETAKES</strong>
+          </div>
+        </div>
+      </div>
+
+      <p id="cameraMessage" class="camera-message">
+        Is this the moment you want to remember?
+      </p>
+
+      <p class="camera-footnote">
+        THE PHOTOGRAPH YOU DON'T TAKE IS ALSO A CHOICE.
+      </p>
+    </section>
+
+    <!-- ================= ARCHIVE ================= -->
+    <section id="memories" class="page interior-page">
+      <div class="section-heading">
+        <span>MODE 03 / MEMORY STORAGE</span>
+        <h2>The moments <em>that stayed.</em></h2>
+        <p>A collection of the days you chose to remember.</p>
+      </div>
+
+      <div class="archive-toolbar">
+        <span>PERSONAL ARCHIVE / OS—2040</span>
+        <span id="archiveCount">000 PRESERVED FRAMES</span>
+      </div>
+
+      <div id="memoryGrid" class="memory-grid"></div>
+
+      <div id="emptyMemories" class="empty-state">
+        <div class="empty-frame">+</div>
+        <h3>Nothing preserved. Yet.</h3>
+        <p>
+          Some moments are meant to be lived,
+          not captured.
+        </p>
+        <button class="secondary-action" data-page="camera">
+          RETURN TO CAMERA ↗
+        </button>
+      </div>
+    </section>
+
+    <!-- ================= TIMELINE ================= -->
+    <section id="journey" class="page interior-page">
+      <div class="section-heading">
+        <span>MODE 04 / TIME RECORD</span>
+        <h2>A life in <em>frames.</em></h2>
+        <p>Every day happened. Not every day needed a photograph.</p>
+      </div>
+
+      <div class="timeline-stats">
+        <div>
+          <strong id="totalMemories">00</strong>
+          <span>FRAMES PRESERVED</span>
+        </div>
+        <div>
+          <strong id="daysCaptured">00</strong>
+          <span>DAYS REMEMBERED</span>
+        </div>
+        <div>
+          <strong id="daysUncaptured">00</strong>
+          <span>DAYS LEFT UNCAPTURED</span>
+        </div>
+      </div>
+
+      <div class="timeline-panel">
+        <div class="timeline-header">
+          <h3 id="calendarTitle">OCTOBER 2040</h3>
+          <span>● PRESERVED &nbsp; ○ LIVED</span>
+        </div>
+        <div id="calendarGrid" class="calendar-grid"></div>
+      </div>
+
+      <p class="timeline-quote">
+        "An empty frame doesn't mean an empty day."
+      </p>
+    </section>
+
+    <!-- ================= FUTURE LETTERS ================= -->
+    <section id="letters" class="page interior-page">
+      <div class="section-heading">
+        <span>MODE 05 / TIME CAPSULE</span>
+        <h2>Dear future <em>me.</em></h2>
+        <p>Some memories deserve to be rediscovered.</p>
+      </div>
+
+      <div class="letter-layout">
+        <div class="letter-paper">
+          <div class="letter-meta">
+            <span>PERSONAL CORRESPONDENCE</span>
+            <span>OS / 2040</span>
+          </div>
+
+          <h3>To the person I'll become...</h3>
+
+          <textarea id="futureLetter"
+            placeholder="I hope you still remember how today felt..."></textarea>
+
+          <div class="letter-footer">
+            <span>DELIVERY: +365 DAYS</span>
+            <span>FROM YOUR PAST SELF</span>
+          </div>
+        </div>
+
+        <div class="letter-information">
+          <span class="letter-symbol">✉</span>
+          <h3>A message through time.</h3>
+          <p>
+            Write something to your future self.
+            Once sealed, your letter stays locked
+            for one year.
+          </p>
+
+          <button id="sealLetterBtn" class="primary-action">
+            SEAL THIS LETTER ↗
+          </button>
+
+          <p id="letterStatus"></p>
+        </div>
+      </div>
+
+      <div id="sealedLetters" class="sealed-letters"></div>
+    </section>
+
+  </main>
+
+  <!-- DEVICE FOOTER -->
+  <footer class="machine-footer">
+    <span>ONE SHOT® / MEMORY MACHINE 2040</span>
+    <span>LESS CAPTURE. MORE PRESENCE.</span>
+    <span>OS—01 / MARK I</span>
+  </footer>
+
+</div>
+
+<!-- MEMORY MODAL -->
+<div id="memoryModal" class="modal" hidden>
+  <div class="modal-panel">
+    <button id="closeModal" class="close-modal" aria-label="Close">×</button>
+
+    <img id="modalImage" alt="Preserved memory">
+    <p id="modalDate"></p>
+
+    <h3>The story behind this moment.</h3>
+
+    <textarea id="memoryNote"
+      placeholder="What do you want to remember about this day?"></textarea>
+
+    <button id="saveNoteBtn" class="primary-action">
+      PRESERVE THIS NOTE ↗
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
